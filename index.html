@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love You</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                                        <img src="assets/clickMe.gif" alt="click me">
+
+                    <img src="assets/frontHeart.gif" alt="heart">
+                </div>
+                <div class="card-back">
+                    <h1>Do You Love Me?💖💖</h1>
+                    <div class="option">
+                        <button id="yes">Yes😊</button>
+                        <button id="target">No😝</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script>
+        const target = document.getElementById('target');
+            let yes = document.getElementById('yes');
+
+            yes.addEventListener('click', () => {
+                alert('😝😝😝😝😝😝😝');
+            })
+
+            function moveTarget() {
+                const maxWidth = 200;
+                const maxHeight = 350;
+
+                const randomX = Math.floor(Math.random() * maxWidth);
+                const randomY = Math.floor(Math.random() * maxHeight);
+
+                target.style.left = randomX + 'px';
+                target.style.top = randomY + 'px';
+            }
+
+            target.addEventListener('mouseenter', function(){
+                    moveTarget();
+                })
+    </script> 
+</body>
+</html>
